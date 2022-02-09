@@ -1,0 +1,36 @@
+<html>
+    <%- include('./partials/head')%>
+    <link rel="stylesheet" href="../../about.css">
+    <body>
+        <%- include('./partials/nav') %>
+
+        <section class="new-entries">
+
+            <% if(blogs.length > 0){ %>
+                <% blogs.forEach(rec => { %>
+                    <a href="/about/<%=rec._id %> ">
+                        <div class="img-dis">
+                            <div class="new-image" name="image"
+                                style="background-image: url('./../uploads/<%= rec.image %>'); background-size: cover;"> </div>
+
+                    </a>
+                    
+
+                        <div class="dets">
+                            <ul>
+                                <li> Recipe Name:<%=rec.recName%> </li>
+                                <li> Category: <%= rec.category %></li>
+                            </ul>
+                    
+                        </div>
+                <% }) %>
+                <% } else { %>
+                    <p><%= "No posts to display currently" %> </p>
+                 <% } %>
+
+        </section>
+
+        </div>
+        
+    </body>
+</html>

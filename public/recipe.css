@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inconsolata:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+
+}
+
+body {
+    background-image:
+        url(./images/burg.webp);
+    background-size: cover;
+    opacity: 1;
+    font-family: 'Inconsolata',
+        monospace;
+
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 1em 3em;
+    background-color: white;
+    min-height: 2.5em;
+    width: 100vw;
+    margin-top: 0;
+    box-shadow: 0 0 10px black;
+
+}
+
+header a {
+    text-decoration: none;
+    margin: 0 1em;
+    color: black;
+}
+
+.input {
+    background: #FFFFFF;
+    border: 1.5px groove #3C6E51;
+    width: 25em;
+    height: 2.5em;
+    padding: 1.3em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+
+
+}
+
+.fa-search {
+    position: absolute;
+    top: 1.3em;
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+header input:focus {
+    outline: none;
+}
+
+.logo {
+    color: red;
+    font-family: 'Dancing Script';
+    font-weight: 700;
+}
+
+header li {
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.log {
+    margin-left: 5em;
+}
+
+.log:hover {
+    color: green;
+}
+
+.ul {
+    margin: 0 2em;
+}
+
+.sign-up {
+    background-color: #3C6E51;
+    padding: 0.7em;
+    color: white;
+    border-radius: 9px;
+    transition: 1s;
+}
+
+.sign-up:hover {
+    background-color: rgb(49, 124, 80);
+    border: solid black 2px;
+    scale: 1;
+}
+
+ul .content {
+    background-color: white;
+    position: absolute;
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6em;
+    padding: 1em;
+    line-height: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+    opacity: 0;
+    transition: 0.7s;
+
+
+}
+
+nav ul .list:hover>.content {
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+.content li {
+    transition: scale 0.8s;
+}
+
+.content li:hover {
+    background-color: #3C6E51;
+    padding: 0.4em;
+    scale: 1.2;
+}
+.title{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    font-size: 1.2em;
+    text-decoration: underline 3px;
+    
+}
+.inputs{
+    min-height: 60em;
+    width: 70%;
+    background-color: rgba(27, 24, 24, 0.835);
+    margin-left: 15em;
+    margin-top: 2em;
+    padding: 2em 3em;
+}
+.uploads{
+    height: 15em;
+    width: 30%;
+    background-color: grey;
+    margin-left: 40em;
+    background: #C4C4C4;
+    border: 3px solid #CE1F1F;
+    box-sizing: border-box;
+}
+
+.entry{
+    color: white;
+    line-height: 2.5em;
+    font-size: 23px;
+}
+.entry li{
+    list-style: none;
+}
+.entry input{
+    width: 31em;
+    padding: 0.4em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: white solid 1px;
+}
+.entry input:focus{
+    outline: none;
+
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 25em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    
+}
+.buttons .button{
+    padding: 0.8em 2.5em;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+}
+.uimage{
+    background-color: rgba(60, 110, 81, 1);
+}
+.save{
+    background-color: rgba(239, 185, 82, 1);
+}

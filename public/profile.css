@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inconsolata:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+
+}
+
+body {
+    background-image:
+        url(./images/burg.webp);
+    background-size: cover;
+    opacity: 1;
+    font-family: 'Inconsolata',
+        monospace;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 3em;
+    background-color: rgba(0, 0, 0, 0.89);
+    min-height: 2.5em;
+    width: 100vw;
+}
+
+header a {
+    text-decoration: none;
+    margin: 0 3em;
+    color: white;
+}
+
+header input {
+    background: #FFFFFF;
+    border: 3px solid #3C6E51;
+    box-sizing: border-box;
+    border-radius: 30.5px;
+    width: 25em;
+    height: 2.5em;
+
+}
+
+.logo {
+    color: red;
+    font-family: 'Dancing Script';
+    font-weight: 700;
+}
+
+header li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.sign-up {
+    background-color: #3C6E51;
+    padding: 0.7em;
+    color: white;
+    border-radius: 9px;
+}
+.section-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    color: white;
+    
+}
+.image{
+    height: 15em;
+    width: 22em;
+    background-image: url(./images/woman.png);
+    background-size: cover;
+    border: 4px solid #FFFFFF;
+    border-radius: 36px;
+    margin-bottom: 3em;
+}
+.info li{
+    list-style: none;
+    line-height: 2em;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.info{
+    margin-left: 3em;
+}
+.section-two{
+    min-height: 25em;
+    width: 80%;
+    margin: auto;
+    margin-top: 8em;
+    padding: 3em;
+}
+.recipe-display{
+    margin-top: 3em;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.img{
+    height: 11em;
+    width: 15em;
+    margin-bottom: 2em;
+    background-color: teal;
+    border-radius: 0.6em;
+}
+.view{
+    width: 13em;
+    padding: 0.8em;
+    margin-left: 2em;
+    border: none;
+    background: #EFB952;
+    color: white;
+    border-radius: 0.8em;
+}
+.section-two h3{
+    color: white;
+    font-size: 1.6em;
+}

@@ -1,0 +1,68 @@
+<html lang="en">
+  <%- include('./partials/head')%>
+  <link rel="stylesheet" href="../../recipe.css" />
+
+  <body>
+    <%- include('./partials/nav')%>
+
+    <section>
+      <div class="title">
+        <h2>Add New Recipe</h2>
+      </div>
+
+      <form method="post" enctype="multipart/form-data" action="/recipe">
+        <div class="inputs">
+          <!-- <div class="uploads"> </div> -->
+          <img src="" class="uploads" name="image" />
+
+          <div class="entry">
+            <li>
+              <i class="fas fa-mortar-pestle"></i> Recipe Name:
+              <input type="text" name="recName" />
+            </li>
+            <li>
+              <i class="fas fa-blender"></i> Recipe By:
+              <input type="text" name="writer" />
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Origin:
+              <input type="text" name="origin" />
+            </li>
+            <li>
+              <i class="fas fa-utensils"></i> Category:
+              <input type="text" name="category" />
+            </li>
+            <li>
+              <i class="fas fa-book-open"></i> Ingredients:
+              <input type="text" name="ingredients" />
+            </li>
+            <li>
+              <i class="fas fa-blender"></i> Recipe :
+              <input type="text" name="recipe" />
+            </li>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <!-- <button class="uimage button"> Upload Image</button>      
+                <button class="save button"> Save Recipe</button> -->
+          <!-- <button class="uimage button" onclick="document.getElementById('getFile').click()">Upload Image</button> -->
+          <input type="file" name="image" id="getFile" class="uimage button" />
+
+          <!-- <input type="file"> -->
+          <button class="save button">Save Recipe</button>
+        </div>
+      </form>
+    </section>
+    <script>
+      const imgInp = document.querySelector("#getFile");
+      const blah = document.querySelector(".uploads");
+      imgInp.onchange = (evt) => {
+        const [file] = imgInp.files;
+        if (file) {
+          blah.src = URL.createObjectURL(file);
+        }
+      };
+    </script>
+  </body>
+</html>

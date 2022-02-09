@@ -1,0 +1,88 @@
+
+<html lang="en">
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="../../display.css">
+
+<body>
+    <%- include('./partials/nav') %>
+    
+
+    <section class="section-one">
+
+        <div class="display-image">
+            <div class="image" style="background-image: url('./../uploads/<%=blog.image %>'); background-size: cover;"></div>
+            <div class="desc">
+                <div class="desc-text">
+                    <h4> Recipe Name:<%=blog.recName%></h4>
+                    <h4> Writer: <%= blog.writer%></h4>
+                </div>
+
+            </div>
+            
+
+        </div>
+        <div class="ingredients">
+            <div class="ingre">
+                <h3> Ingredients</h3>
+                <ul class="list">
+                   
+                    <% blog.ingredients.split(',').forEach ( ingredient => { %>
+                        <li> - <%=ingredient %></li>
+
+                    <% }) %>
+                    
+                    
+                  
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-two">
+        <div class="steps">
+            <h3> Steps</h3>
+            <p> <%= blog.recipe%></p>
+        </div>
+    </section>
+
+    <div class="section-three">
+        <div class="comment">
+            <h3>Reviews</h3>
+            <h4> 2 comments</h4>
+        </div>
+        <div class="comments">
+            <input type="text" placeholder=" Write a comment ......">
+            <div class="opinion">
+                <div class="initials"></div>
+                <p>Tiramisu cake danish halvah macaroon muffin apple pie. Toffee marshmallow
+                    lollipop toffee oat cake. Tootsie roll pastry sesame snaps fruitcake chocolate cake
+                    dessert. Chupa chups pudding pie jelly beans sesame snaps fruitcake.</p>
+            </div>
+            <div class="opinion">
+                <div class="initials"></div>
+                <p>Danish brownie lollipop macaroon macaroon halvah tiramisu. Lemon drops sugar plum gummi
+                    bears jelly beans chocolate cake tart pastry. Powder cake tootsie roll brownie jelly-o chocolate cake
+                    apple pie gummies.</p>
+            </div>
+
+
+            
+
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
