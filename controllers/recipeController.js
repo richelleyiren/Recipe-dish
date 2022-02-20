@@ -1,4 +1,5 @@
 const recMod = require("../models/recipeModel");
+const bycrypt = require('bcrypt')
 
 
 const addRecipe = (req, res) => {

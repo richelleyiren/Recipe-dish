@@ -10,7 +10,7 @@
 
 body {
     background-image:
-        url(./images/burg.webp);
+        url(./images/brown.webp);
     background-size: cover;
     opacity: 1;
     font-family: 'Inconsolata',
@@ -53,7 +53,7 @@ header a {
 
 .fa-search {
     position: absolute;
-    top: 1.3em;
+    top: 1.7em;
     margin-left: 0.5em;
     cursor: pointer;
 }
@@ -76,6 +76,7 @@ header li {
 
 .log {
     margin-left: 5em;
+    cursive;
 }
 
 .log:hover {
@@ -100,37 +101,42 @@ header li {
     scale: 1;
 }
 
-ul .content {
-    background-color: white;
+/* drop-down */
+
+nav {
+    position: relative;
+}
+
+.drop-down {
+    display: block;
     position: absolute;
-    width: 10em;
+    left: 13em;
+    top: 50%;
+    display: none;
+}
+
+.drop-down ul {
+    background-color: white;
     display: flex;
     flex-direction: column;
-    margin-top: 1.6em;
-    padding: 1em;
-    line-height: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
-    opacity: 0;
-    transition: 0.7s;
-
-
+    margin: 10px;
 }
 
-nav ul .list:hover>.content {
-    opacity: 1;
-    cursor: pointer;
-
+.drop-down ul li {
+    width: 150px;
+    padding: 10px;
+    transition: 1.2s;
 }
 
-.content li {
-    transition: scale 0.8s;
+nav ul li:hover .drop-down {
+    display: block;
 }
 
-.content li:hover {
-    background-color: #3C6E51;
-    padding: 0.4em;
-    scale: 1.2;
+.drop-down ul li:hover {
+    background-color: tomato;
+    scale: 1.1;
 }
+
 .section-one{
     min-height: 30em;
     width: 100%;
@@ -173,7 +179,7 @@ nav ul .list:hover>.content {
 }
 .ingredients{
    background: rgba(0, 0, 0, 0.47);
-    height: 21em;
+    min-height: 11em;
     width: 30em;
     margin-top: 2em;
     margin-left: 3em;

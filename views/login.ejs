@@ -1,0 +1,72 @@
+<html>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="../../login.css">
+    <body>
+        <%- include('./partials/nav') %>
+        <section class="main-card">
+            <div class="formBx">
+                <form>
+                    <h2>Log In</h2>
+                    <div>
+                        <input type="text" name="" placeholder="Username" />
+                        <div class="email" style="color: tomato; text-align: center"></div>
+                    </div>
+                    <div>
+                        <input type="password" name="" placeholder="Password" />
+                        <div class="password" style="color: tomato; text-align: center"></div>
+                    </div>
+                    <input type="submit" name="signup" value="Log In" />
+                    <p class="signup">
+                        Don't have an account ?<a href="/signup">
+                            Sign Up
+                        </a>
+                    </p>
+                </form>
+            </div>
+            </div>
+        
+        </section>
+        <script>
+            const form = document.querySelector("form");
+            const emailError = document.querySelector(".email");
+            const passwordError = document.querySelector(".password");
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const email = form.email.value;
+                const password = form.password.value;
+
+                emailError.textContent = "";
+                passwordError.textContent = "";
+
+                try {
+                    const response = await fetch("/login", {
+                        method: "POST",
+                        body: JSON.stringify({ email, password }),
+                        headers: { "Content-Type": "application/json" },
+                    });
+
+                    const data = await response.json();
+                    console.log(data);
+
+                    //   error handling on the client side 
+
+                    if (data.errors) {
+                        if (data.errors.split(" ").includes("Email")) {
+                            emailError.textContent = data.errors;
+                        } else {
+                            passwordError.textContent = data.errors;
+                        }
+                    }
+
+                    if (data.user) {
+                        location.assign("/");
+                    }
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+        </script>
+    </body>
+</html>

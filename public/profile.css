@@ -10,7 +10,7 @@
 
 body {
     background-image:
-        url(./images/burg.webp);
+        url(./images/brown.webp);
     background-size: cover;
     opacity: 1;
     font-family: 'Inconsolata',
@@ -20,27 +20,46 @@ body {
 
 header {
     display: flex;
+    width: 100vw;
     justify-content: space-between;
     padding: 1em 3em;
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: white;
     min-height: 2.5em;
     width: 100vw;
+    margin-top: 0;
+    box-shadow: 0 0 10px black;
+
 }
 
 header a {
     text-decoration: none;
-    margin: 0 3em;
-    color: white;
+    margin: 0 1em;
+    color: black;
 }
 
-header input {
+.input {
     background: #FFFFFF;
-    border: 3px solid #3C6E51;
-    box-sizing: border-box;
-    border-radius: 30.5px;
+    border: 1.5px groove #3C6E51;
     width: 25em;
     height: 2.5em;
+    padding: 1.3em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
 
+
+
+}
+
+.fa-search {
+    position: absolute;
+    top: 1.7em;
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+header input:focus {
+    outline: none;
 }
 
 .logo {
@@ -52,6 +71,20 @@ header input {
 header li {
     list-style-type: none;
     display: inline-block;
+    cursor: pointer;
+}
+
+.log {
+    margin-left: 5em;
+    cursive;
+}
+
+.log:hover {
+    color: green;
+}
+
+.ul {
+    margin: 0 2em;
 }
 
 .sign-up {
@@ -59,7 +92,51 @@ header li {
     padding: 0.7em;
     color: white;
     border-radius: 9px;
+    transition: 1s;
 }
+
+.sign-up:hover {
+    background-color: rgb(49, 124, 80);
+    border: solid black 2px;
+    scale: 1;
+}
+
+/* drop-down */
+
+nav {
+    position: relative;
+}
+
+.drop-down {
+    display: block;
+    position: absolute;
+    left: 13em;
+    top: 50%;
+    display: none;
+}
+
+.drop-down ul {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.drop-down ul li {
+    width: 150px;
+    padding: 10px;
+    transition: 1.2s;
+}
+
+nav ul li:hover .drop-down {
+    display: block;
+}
+
+.drop-down ul li:hover {
+    background-color: tomato;
+    scale: 1.1;
+}
+
 .section-one{
     display: flex;
     flex-direction: column;
